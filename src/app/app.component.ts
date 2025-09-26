@@ -11,7 +11,7 @@ import { ImportsModule } from './imports';
 @Component({
   selector: 'app-root',
   imports: [FormsModule, CommonModule, RouterModule, RouterOutlet, ConfirmDialog,
-    ImportsModule, ToastModule, DialogModule,
+    ImportsModule, ToastModule, DialogModule, UsuarioModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

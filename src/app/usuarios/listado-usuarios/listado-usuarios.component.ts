@@ -9,9 +9,10 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-listado-usuarios',
+  standalone: true,
   imports: [CommonModule, FormsModule, ImportsModule, RouterOutlet],
   templateUrl: './listado-usuarios.component.html',
-  styleUrl: './listado-usuarios.component.css'
+  styleUrls: ['./listado-usuarios.component.css']
 })
 export class ListadoUsuariosComponent implements OnInit{
   usuarios: Usuario[] = [];

@@ -2,6 +2,8 @@ import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } fr
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura'
+
 import { provideHttpClient } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
@@ -14,6 +16,11 @@ export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
     provideAnimationsAsync(),
+    providePrimeNG({
+      theme:{
+        preset: Aura
+      }
+    },),
     provideHttpClient(),
     importProvidersFrom(ToastModule, ConfirmDialogModule),
     MessageService,
