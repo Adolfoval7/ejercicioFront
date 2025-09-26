@@ -1,0 +1,33 @@
+::ng-deep .p-card{
+    font-family: sans-serif;
+}
+
+p-card th{
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+p-card td{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+::ng-deep .p-confirmdialog {
+    border-radius: 12px;
+    padding: 5px;
+    background-color: #f9f9ff;
+    font-family: sans-serif;
+}
+
+.textoCentrado{
+    text-align: center;
+}
+
+.saltoLinea{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.negrita{
+    font-weight: bold;
+}
