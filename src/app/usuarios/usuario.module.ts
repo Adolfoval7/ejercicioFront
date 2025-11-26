@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { UsuariosService } from './usuarios.service';
 import { FormsModule } from '@angular/forms';
 import { ListadoUsuariosComponent } from './listado-usuarios/listado-usuarios.component';
+import { NuevoUsuarioComponent } from './nuevo-usuario/nuevo-usuario.component';
+import { DetalleUsuarioComponent } from './detalle-usuario/detalle-usuario.component';
 
 
 @NgModule({
@@ -11,8 +13,10 @@ import { ListadoUsuariosComponent } from './listado-usuarios/listado-usuarios.co
     CommonModule,
     FormsModule,
     ListadoUsuariosComponent,
+    NuevoUsuarioComponent,
+    DetalleUsuarioComponent
   ],
   providers: [UsuariosService],
-  exports: [ListadoUsuariosComponent]
+  exports: [ListadoUsuariosComponent, NuevoUsuarioComponent, DetalleUsuarioComponent]
 })
 export class UsuarioModule { }

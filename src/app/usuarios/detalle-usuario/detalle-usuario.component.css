@@ -1,0 +1,45 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+p-card{
+    width: 750px;
+    padding: 20px;
+}
+
+input{
+    width: 100%;
+    min-width: 450px;
+}
+
+.container-header{
+    margin-bottom: 50px;
+}
+
+.container-field{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px
+}
+
+.encabezado{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.textoBold{
+    font-weight: bold;
+}

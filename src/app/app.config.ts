@@ -2,7 +2,8 @@ import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } fr
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura'
+// import Aura from '@primeng/themes/aura'
+import Aura from '@primeuix/themes/aura';
 
 import { provideHttpClient } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';

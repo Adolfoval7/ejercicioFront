@@ -1,32 +1,30 @@
 <p-card>
   <h1>Listado de Usuarios</h1>
 
-  <div *ngIf="hayUsuarios" class="textoCentrado">
+  <div *ngIf="!hayUsuarios" class="textoCentrado">
     <p>No hay usuarios registrados.</p>
   </div>
 
-  <p-table *ngIf="!hayUsuarios" [value]="usuarios" [tableStyle]="{ 'min-width': '50rem' }">
+  <p-table *ngIf="hayUsuarios" [value]="usuarios" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
       <tr>
-        <th class="textoCentrado" pSortableColumn="numero_usuario">
+        <th class="textoCentrado">
           <span>ID</span>
-          <p-sortIcon field="numero_usuario"></p-sortIcon>
         </th>
-        <th class="textoCentrado" pSortableColumn="nombre_usuario">
+        <th class="textoCentrado" pSortableColumn="nombreUsuario">
           <span>Nombre</span>
-          <p-sortIcon field="nombre_usuario"></p-sortIcon>
+          <p-sortIcon field="nombreUsuario"></p-sortIcon>
         </th>
-        <th class="textoCentrado" pSortableColumn="apellido_usuario">
+        <th class="textoCentrado" pSortableColumn="apellidoUsuario">
           <span>Apellido</span>
-          <p-sortIcon field="apellido_usuario"></p-sortIcon>
+          <p-sortIcon field="apellidoUsuario"></p-sortIcon>
         </th>
-        <th class="textoCentrado" pSortableColumn="email_usuario">
+        <th class="textoCentrado" pSortableColumn="emailUsuario">
           <span>Email</span>
-          <p-sortIcon field="email_usuario"></p-sortIcon>
+          <p-sortIcon field="emailUsuario"></p-sortIcon>
         </th>
-        <th class="textoCentrado" pSortableColumn="telefono_usuario">
+        <th class="textoCentrado">
           <span>Teléfono</span>
-          <p-sortIcon field="telefono_usuario"></p-sortIcon>
         </th>
         <th>Acciones</th>
       </tr>

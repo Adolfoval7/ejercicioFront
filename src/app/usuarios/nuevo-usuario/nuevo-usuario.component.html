@@ -1,0 +1,89 @@
+<main>
+    <p-card>
+        <div class="container-header encabezado">
+            <h1>Registro de Nuevo Usuario</h1>
+        </div>
+
+        <div>
+            <form [formGroup]="usuarioFormGroup">
+                <div class="container-field">
+                    <p-floatlabel class="textoBold">
+                        <input
+                            id="numero_usuario"
+                            name="numero_usuario"
+                            pInputText
+                            required
+                            formControlName="numeroUsuario"
+                            pTooltip="Ingrese el número de usuario"
+                        />
+                        <label for="numero_usuario">Número de Usuario</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="container-field">
+                    <p-floatlabel class="textoBold">
+                        <input
+                            id="nombre_usuario"
+                            name="nombre_usuario"
+                            pInputText
+                            required
+                            formControlName="nombreUsuario"
+                            pTooltip="Ingrese el nombre de usuario"
+                        />
+                        <label for="nombre_usuario">Nombre</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="container-field">
+                    <p-floatlabel class="textoBold">
+                        <input
+                            id="apellido_usuario"
+                            name="apellido_usuario"
+                            pInputText
+                            required
+                            formControlName="apellidoUsuario"
+                            pTooltip="Ingrese el apellido de usuario"
+                        />
+                        <label for="apellido_usuario">Apellido</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="container-field">
+                    <p-floatlabel class="textoBold">
+                        <input
+                            id="email_usuario"
+                            name="email_usuario"
+                            pInputText
+                            required
+                            formControlName="emailUsuario"
+                            pTooltip="Ingrese el email de usuario"
+                        />
+                        <label for="email_usuario">Email</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="container-field">
+                    <p-floatlabel class="textoBold">
+                        <input
+                            id="telefono_usuario"
+                            name="telefono_usuario"
+                            pInputText
+                            required
+                            formControlName="telefonoUsuario"
+                            pTooltip="Ingrese el teléfono de usuario"
+                        />
+                        <label for="telefono_usuario">Teléfono</label>
+                    </p-floatlabel>
+                </div>
+
+                <div class="container-button">
+                    <p-button
+                        label="Registrar Usuario"
+                        icon="pi pi-check"
+                        class="p-button-success"
+                    />
+                </div>
+            </form>
+        </div>
+    </p-card>
+</main>
