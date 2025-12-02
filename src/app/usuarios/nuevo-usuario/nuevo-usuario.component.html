@@ -78,9 +78,16 @@
 
                 <div class="container-button">
                     <p-button
+                        class="btn-confirmar"    
                         label="Registrar Usuario"
                         icon="pi pi-check"
-                        class="p-button-success"
+                        (click)="nuevoUsuario()"
+                    />
+                    <p-button
+                        class="btn-limpiar"
+                        label="Limpiar Campos"
+                        icon="pi pi-eraser"
+                        (click)="limpiarCampos()"
                     />
                 </div>
             </form>

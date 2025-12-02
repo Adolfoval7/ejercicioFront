@@ -4,6 +4,7 @@ import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Va
 import { ImportsModule } from '../../imports';
 import { Router, RouterOutlet } from '@angular/router';
 import { Usuario } from '../usuario.model';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-nuevo-usuario',
@@ -17,7 +18,7 @@ export class NuevoUsuarioComponent {
   usuario: Usuario = {} as Usuario;
   
 	usuarioFormGroup = new FormGroup({
-		numeroUsuario: new FormControl<number>(0, {nonNullable: true, validators: [
+		numeroUsuario: new FormControl<number>(10000000, {nonNullable: true, validators: [
 			Validators.required,
 			Validators.min(10000000),
 			Validators.max(99999999)
@@ -54,13 +55,33 @@ export class NuevoUsuarioComponent {
 // 	this.usuarioFormGroup
 // ]);
 
-
-  	constructor(private router: Router) {}
+  	constructor(
+		private router: Router, 
+		private confirmationService: ConfirmationService, 
+		private messageService: MessageService) {}
 
 	nuevoUsuario() {
 		if (this.usuarioFormGroup.valid) {
-			this.usuario = this.usuarioFormGroup.value as Usuario;
-			console.log('Nuevo usuario creado: ', this.usuario);
+			this.usuario = this.usuarioFormGroup.value as Usuario
+			this.messageService.add({ severity: 'success', summary: 'Cambios confirmados', detail: 'Los cambios se han guardado exitosamente.' });
+		} else {
+			this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Por favor, complete todos los campos correctamente.' });
 		}
+	}
+
+	limpiarCampos(){
+		this.confirmationService.confirm({
+			message: '¿Desea limpiar los campos del formulario?',
+			header: 'Importante',
+			icon: 'pi pi-info',
+			defaultFocus: 'reject',
+			accept: () => {
+				this.messageService.add({ severity: 'success', summary: 'Campos limpiados', detail: 'Los campos del formulario han sido limpiados.' });
+				this.usuarioFormGroup.reset();
+			},
+			reject: () => {
+				this.messageService.add({ severity: 'info', summary: 'Cancelada', detail: 'La acción ha sido cancelada.' });
+			}
+		})
 	}
 }

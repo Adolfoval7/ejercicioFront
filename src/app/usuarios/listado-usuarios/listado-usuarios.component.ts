@@ -26,26 +26,10 @@ export class ListadoUsuariosComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    // this.usuariosService.listadoUsuarios().subscribe((usuarios) => {
-    //   this.usuarios = usuarios;
-    //   this.hayUsuarios = this.usuarios.length > 0;
-    // });
-
-    this.usuarios = [{
-      numeroUsuario: 1,
-      nombreUsuario: 'Juan',
-      apellidoUsuario: 'Pérez',
-      emailUsuario: 'juan.perez@email.com',
-      telefonoUsuario: '123456789'
-    },
-    {
-      numeroUsuario: 2,
-      nombreUsuario: 'Ana',
-      apellidoUsuario: 'García',
-      emailUsuario: 'ana.garcia@email.com',
-      telefonoUsuario: '987654321'
-    }];
-    this.hayUsuarios = this.usuarios.length > 0;
+    this.usuariosService.listadoUsuarios().subscribe((usuarios) => {
+      this.usuarios = usuarios;
+      this.hayUsuarios = this.usuarios.length > 0;
+    });
   }
 
   eliminarUsuario(numero_usuario: number, event: Event) {

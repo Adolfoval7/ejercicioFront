@@ -79,15 +79,17 @@
 
                 <div class="container-button">
                     <p-button
+                        class="btn-confirmar"
                         label="Registrar Usuario"
                         icon="pi pi-check"
-                        class="p-button-success"
+                        (click)="confirmarCambios()"
                     />
 
                     <p-button
+                        class="btn-cancelar"
                         label="Cancelar"
                         icon="pi pi-times"
-                        class="p-button-danger"
+                        (click)="cancelarCambios()"
                     />
                 </div>
             </form>

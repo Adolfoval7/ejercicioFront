@@ -43,3 +43,17 @@ input{
 .textoBold{
     font-weight: bold;
 }
+
+.btn-confirmar {
+    margin-right: 15px;
+}
+
+::ng-deep .p-confirmdialog {
+    border-radius: 12px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+::ng-deep .p-tooltip {
+    font-family: sans-serif;
+}

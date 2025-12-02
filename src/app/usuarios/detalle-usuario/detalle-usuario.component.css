@@ -34,6 +34,10 @@ input{
     margin-bottom: 20px
 }
 
+.btn-confirmar {
+    margin-right: 15px;
+}
+
 .encabezado{
     font-size: 24px;
     font-weight: bold;
@@ -42,4 +46,8 @@ input{
 
 .textoBold{
     font-weight: bold;
+}
+
+::ng-deep .p-tooltip {
+    font-family: sans-serif;
 }
